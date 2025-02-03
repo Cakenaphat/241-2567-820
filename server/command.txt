@@ -1,0 +1,2 @@
+docker -v //Docker version 19.03.5,
+docker system prune
