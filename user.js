@@ -16,7 +16,7 @@ const loadData = async () => {
         let user = response.data[i];
         htmlData += `<div>${user.id} ${user.firstname} ${user.lastname}
         <a href= 'index.html?id=${user.id}'><button>Edit</button>
-        <button class ='delete' data-id='${user.id}')">Delete</button>
+        <button class="delete" data-id="${user.id}">Delete</button>
         </div>`
     }
     
@@ -31,9 +31,9 @@ const loadData = async () => {
             try{
                 await axios.delete(`${BASE_URL}/users/${id}`);
                 loadData();
-            } catch{
-                console.log('error', error);
-            }
+            } catch (error) {
+                console.error('Error:', error);
+            }            
         });
     }
 }

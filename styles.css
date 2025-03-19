@@ -15,15 +15,19 @@ body {
 
 .container {
     width: 100%;
-    max-width: 640px;
+    max-width: 540px;
     margin-left: auto;
     margin-right: auto;
     background-color: azure;
-    padding: 20px;
+    padding: 50px;
+    border-radius: 5px;
     box-sizing: border-box;
+    font-size: 20px;
 }
 .header{
-    font-size: 30px;
+    font-size: 50px;
+    position: relative;
+    top: -20px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -40,14 +44,41 @@ input.form, textarea {
     border: 1px solid black;
     width: 100%;
 }
+
+input[type="text"], input[type="number"], textarea {
+    width: 300px;  /* ปรับความกว้าง */
+    height: 25px;  /* ปรับความสูง */
+    font-size: 20px; /* ขยายตัวอักษรให้ชัดขึ้น */
+    padding: 5px;  /* เพิ่มช่องว่างด้านใน */
+    border-radius: 5px;  /* ทำให้มีมุมโค้ง */
+
+}
+
+
 .center{
     text-align: center;
 }
 .button {
     border: 0;
     width: 50%;
+    font-size: 20px;
     background-color: aqua;
-    height: 40px;
+    height: 50px;
+}
+
+label {
+    display: block;      /* ทำให้ label เป็นบล็อก เพื่อให้ขึ้นบรรทัดใหม่ */
+    margin-bottom: 10px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+textarea {
+    display: block; /* ทำให้ textarea อยู่คนละบรรทัด */
+    width: 100%; /* ปรับให้กว้างเต็มพื้นที่ */
+    height: 100px; /* ปรับความสูง */
+}
+
+input, textarea, select {
+    margin-bottom: 10px; /* เพิ่มระยะห่างระหว่าง input */
 }
 
 .message {
@@ -66,6 +97,27 @@ input.form, textarea {
     background-color: lightcoral;
     display: block;
 }
+
+.user-management-container {
+    text-align: center;  /* จัดให้อยู่ตรงกลาง */
+    margin-top: 20px;  /* เว้นระยะห่างจากปุ่ม */
+}
+
+.user-management-link {
+    border: 2px solid rgb(51, 46, 46); /* กรอบสีดำ */
+    background-color: rgb(119, 180, 215); /* พื้นหลังสีเทา */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: yellow; /* เปลี่ยนสีพื้นหลังเมื่อชี้เมาส์ */
+    color: red; /* เปลี่ยนสีตัวอักษร */
+}
+
+
 @media screen and (max-width: 768px) {
     .flex {
         flex-direction: column;
